@@ -1,0 +1,273 @@
+{
+  "suite_name": "baseline",
+  "runs": [
+    {
+      "task_id": "T01",
+      "task_description": "Open https://github.com/browser-use/browser-use and report the star count shown on the repository's main page. Stop after you have read the number.",
+      "mode": "baseline",
+      "run_index": 0,
+      "steps": [
+        {
+          "step_id": 1,
+          "timestamp": "2026-04-26T04:37:28.724907Z",
+          "intent": "Declare the task complete and return the final answer.",
+          "action": {
+            "type": "extract",
+            "target": {
+              "raw_type": "done",
+              "params": {
+                "text": "The browser-use/browser-use GitHub repository currently shows **90.3k stars** (exactly 90,311 stars, as indicated by the aria-label `aria-label=90311 users starred this repository` on the star counter element). This is visible both in the Star button at the top right of the page and in the About section on the right sidebar.",
+                "success": true,
+                "files_to_display": []
+              }
+            },
+            "payload": null
+          },
+          "before_screenshot": "screenshots/step_001_before.png",
+          "after_screenshot": "screenshots/step_001_after.png",
+          "context": {
+            "url_before": "https://github.com/browser-use/browser-use",
+            "url_after": "https://github.com/browser-use/browser-use",
+            "pixel_diff_pct": 0.0,
+            "dom_nodes_added": 0,
+            "dom_nodes_removed": 0,
+            "dom_nodes_changed": 0
+          },
+          "verifier_verdict": null,
+          "ground_truth_label": null
+        }
+      ],
+      "final_status": "success",
+      "error_message": null,
+      "started_at": "2026-04-26T04:37:28.723233Z",
+      "finished_at": "2026-04-26T04:37:29.145850Z"
+    },
+    {
+      "task_id": "T03",
+      "task_description": "Open https://the-internet.herokuapp.com/login. Log in with the username 'tomsmith' and the password 'SuperSecretPassword!'. Stop when you have successfully logged in.",
+      "mode": "baseline",
+      "run_index": 0,
+      "steps": [
+        {
+          "step_id": 1,
+          "timestamp": "2026-04-26T04:01:03.438778Z",
+          "intent": "Fill in username and password fields, then click the Login button.",
+          "action": {
+            "type": "click",
+            "target": {
+              "raw_type": "input",
+              "params": {
+                "index": 8,
+                "text": "tomsmith",
+                "clear": true
+              }
+            },
+            "payload": null
+          },
+          "before_screenshot": "screenshots/step_001_before.png",
+          "after_screenshot": "screenshots/step_001_after.png",
+          "context": {
+            "url_before": "https://the-internet.herokuapp.com/login",
+            "url_after": "https://the-internet.herokuapp.com/login",
+            "pixel_diff_pct": 1.9803392702912592,
+            "dom_nodes_added": 0,
+            "dom_nodes_removed": 0,
+            "dom_nodes_changed": 0
+          },
+          "verifier_verdict": null,
+          "ground_truth_label": null
+        },
+        {
+          "step_id": 2,
+          "timestamp": "2026-04-26T04:01:09.519831Z",
+          "intent": "Enter the password 'SuperSecretPassword!' and click the Login button.",
+          "action": {
+            "type": "click",
+            "target": {
+              "raw_type": "input",
+              "params": {
+                "index": 9,
+                "text": "SuperSecretPassword!",
+                "clear": true
+              }
+            },
+            "payload": null
+          },
+          "before_screenshot": "screenshots/step_002_before.png",
+          "after_screenshot": "screenshots/step_002_after.png",
+          "context": {
+            "url_before": "https://the-internet.herokuapp.com/login",
+            "url_after": "https://the-internet.herokuapp.com/login",
+            "pixel_diff_pct": 3.9610641162424427,
+            "dom_nodes_added": 0,
+            "dom_nodes_removed": 0,
+            "dom_nodes_changed": 0
+          },
+          "verifier_verdict": null,
+          "ground_truth_label": null
+        },
+        {
+          "step_id": 3,
+          "timestamp": "2026-04-26T04:01:15.512373Z",
+          "intent": "Click the Login button to submit the credentials and complete the login.",
+          "action": {
+            "type": "click",
+            "target": {
+              "raw_type": "click",
+              "params": {
+                "index": 10
+              }
+            },
+            "payload": null
+          },
+          "before_screenshot": "screenshots/step_003_before.png",
+          "after_screenshot": "screenshots/step_003_after.png",
+          "context": {
+            "url_before": "https://the-internet.herokuapp.com/login",
+            "url_after": "https://the-internet.herokuapp.com/secure",
+            "pixel_diff_pct": 8.27209484616892,
+            "dom_nodes_added": 0,
+            "dom_nodes_removed": 0,
+            "dom_nodes_changed": 0
+          },
+          "verifier_verdict": null,
+          "ground_truth_label": null
+        },
+        {
+          "step_id": 4,
+          "timestamp": "2026-04-26T04:01:25.339351Z",
+          "intent": "Task is complete - login was successful. Call done.",
+          "action": {
+            "type": "extract",
+            "target": {
+              "raw_type": "done",
+              "params": {
+                "text": "Successfully logged in! The page now shows the 'Secure Area' with a green confirmation banner reading 'You logged into a secure area!' at https://the-internet.herokuapp.com/secure. The login was completed using username 'tomsmith' and password 'SuperSecretPassword!'.",
+                "success": true,
+                "files_to_display": []
+              }
+            },
+            "payload": null
+          },
+          "before_screenshot": "screenshots/step_004_before.png",
+          "after_screenshot": "screenshots/step_004_after.png",
+          "context": {
+            "url_before": "https://the-internet.herokuapp.com/secure",
+            "url_after": "https://the-internet.herokuapp.com/secure",
+            "pixel_diff_pct": 0.0,
+            "dom_nodes_added": 0,
+            "dom_nodes_removed": 0,
+            "dom_nodes_changed": 0
+          },
+          "verifier_verdict": null,
+          "ground_truth_label": null
+        }
+      ],
+      "final_status": "success",
+      "error_message": null,
+      "started_at": "2026-04-26T04:01:03.437559Z",
+      "finished_at": "2026-04-26T04:01:26.493904Z"
+    },
+    {
+      "task_id": "T05",
+      "task_description": "Open https://the-internet.herokuapp.com/dynamic_loading/2. Click the Start button and wait for 'Hello World!' to appear.",
+      "mode": "baseline",
+      "run_index": 0,
+      "steps": [
+        {
+          "step_id": 1,
+          "timestamp": "2026-04-26T04:37:43.483702Z",
+          "intent": "Click the element at index 8.",
+          "action": {
+            "type": "click",
+            "target": {
+              "raw_type": "click",
+              "params": {
+                "index": 8
+              }
+            },
+            "payload": null
+          },
+          "before_screenshot": "screenshots/step_001_before.png",
+          "after_screenshot": "screenshots/step_001_after.png",
+          "context": {
+            "url_before": "https://the-internet.herokuapp.com/dynamic_loading/2",
+            "url_after": "https://the-internet.herokuapp.com/dynamic_loading/2",
+            "pixel_diff_pct": 0.9155153831079758,
+            "dom_nodes_added": 0,
+            "dom_nodes_removed": 0,
+            "dom_nodes_changed": 0
+          },
+          "verifier_verdict": null,
+          "ground_truth_label": null
+        },
+        {
+          "step_id": 2,
+          "timestamp": "2026-04-26T04:37:49.314706Z",
+          "intent": "Wait 5 for the page to update.",
+          "action": {
+            "type": "wait",
+            "target": {
+              "raw_type": "wait",
+              "params": {
+                "seconds": 5
+              }
+            },
+            "payload": null
+          },
+          "before_screenshot": "screenshots/step_002_before.png",
+          "after_screenshot": "screenshots/step_002_after.png",
+          "context": {
+            "url_before": "https://the-internet.herokuapp.com/dynamic_loading/2",
+            "url_after": "https://the-internet.herokuapp.com/dynamic_loading/2",
+            "pixel_diff_pct": 0.6940815497056924,
+            "dom_nodes_added": 0,
+            "dom_nodes_removed": 0,
+            "dom_nodes_changed": 0
+          },
+          "verifier_verdict": null,
+          "ground_truth_label": null
+        },
+        {
+          "step_id": 3,
+          "timestamp": "2026-04-26T04:37:59.234559Z",
+          "intent": "Declare the task complete and return the final answer.",
+          "action": {
+            "type": "extract",
+            "target": {
+              "raw_type": "done",
+              "params": {
+                "text": "Task completed successfully! I navigated to https://the-internet.herokuapp.com/dynamic_loading/2, clicked the Start button, waited for the dynamic loading to complete, and 'Hello World!' has now appeared on the page as confirmed in the screenshot.",
+                "success": true,
+                "files_to_display": []
+              }
+            },
+            "payload": null
+          },
+          "before_screenshot": "screenshots/step_003_before.png",
+          "after_screenshot": "screenshots/step_003_after.png",
+          "context": {
+            "url_before": "https://the-internet.herokuapp.com/dynamic_loading/2",
+            "url_after": "https://the-internet.herokuapp.com/dynamic_loading/2",
+            "pixel_diff_pct": 0.0,
+            "dom_nodes_added": 0,
+            "dom_nodes_removed": 0,
+            "dom_nodes_changed": 0
+          },
+          "verifier_verdict": null,
+          "ground_truth_label": null
+        }
+      ],
+      "final_status": "success",
+      "error_message": null,
+      "started_at": "2026-04-26T04:37:43.483085Z",
+      "finished_at": "2026-04-26T04:37:59.487097Z"
+    }
+  ],
+  "baseline_success_rate": 1.0,
+  "verified_success_rate": null,
+  "delta_pp": null,
+  "verifier_precision": null,
+  "verifier_recall": null,
+  "verifier_accuracy": null
+}

@@ -88,14 +88,18 @@ class Verifier:
         before_screenshot_path: str | Path,
         after_screenshot_path: str | Path,
         context: StepContext,
+        agent_plan: str | None = None,
     ) -> Verdict:
         before_b64 = _b64(before_screenshot_path)
         after_b64 = _b64(after_screenshot_path)
 
+        plan_line = f"Plan context (for orientation, do NOT grade against this): {agent_plan}\n" if agent_plan else ""
         user_text = (
             f"Intent: {intent}\n"
             f"Action: {action.model_dump_json()}\n"
-            f"Context: {context.model_dump_json()}\n\n"
+            f"Context: {context.model_dump_json()}\n"
+            f"{plan_line}"
+            "\n"
             "[before screenshot attached]\n"
             "[after screenshot attached]"
         )

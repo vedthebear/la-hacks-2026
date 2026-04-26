@@ -1,0 +1,329 @@
+{
+  "suite_name": "verified",
+  "runs": [
+    {
+      "task_id": "T01",
+      "task_description": "Open https://github.com/browser-use/browser-use and report the star count shown on the repository's main page. Stop after you have read the number.",
+      "mode": "verified",
+      "run_index": 0,
+      "steps": [
+        {
+          "step_id": 1,
+          "timestamp": "2026-04-26T04:40:30.500565Z",
+          "intent": "Declare the task complete and return the final answer.",
+          "action": {
+            "type": "extract",
+            "target": {
+              "raw_type": "done",
+              "params": {
+                "text": "The browser-use/browser-use GitHub repository shows a star count of **90.3k** (exactly 90,311 stars), as shown on the repository's main page.",
+                "success": true,
+                "files_to_display": []
+              }
+            },
+            "payload": null
+          },
+          "before_screenshot": "screenshots/step_001_before.png",
+          "after_screenshot": "screenshots/step_001_after.png",
+          "context": {
+            "url_before": "https://github.com/browser-use/browser-use",
+            "url_after": "https://github.com/browser-use/browser-use",
+            "pixel_diff_pct": 0.0,
+            "dom_nodes_added": 0,
+            "dom_nodes_removed": 0,
+            "dom_nodes_changed": 0
+          },
+          "verifier_verdict": {
+            "verdict": "pass",
+            "confidence": 0.95,
+            "reason": "The 'done' action was executed to declare task completion with the final answer reporting 90.3k stars, which matches the visible star count on the GitHub page (90.3k stars shown in both the header and the About section).",
+            "recommend": null,
+            "latency_ms": 3712,
+            "model": "claude-sonnet-4-6"
+          },
+          "ground_truth_label": null
+        }
+      ],
+      "final_status": "success",
+      "error_message": null,
+      "started_at": "2026-04-26T04:40:30.498941Z",
+      "finished_at": "2026-04-26T04:40:34.704289Z"
+    },
+    {
+      "task_id": "T03",
+      "task_description": "Open https://the-internet.herokuapp.com/login. Log in with the username 'tomsmith' and the password 'SuperSecretPassword!'. Stop when you have successfully logged in.",
+      "mode": "verified",
+      "run_index": 0,
+      "steps": [
+        {
+          "step_id": 1,
+          "timestamp": "2026-04-26T04:40:50.344237Z",
+          "intent": "Type 'tomsmith' into the field at index 8.",
+          "action": {
+            "type": "click",
+            "target": {
+              "raw_type": "input",
+              "params": {
+                "index": 8,
+                "text": "tomsmith",
+                "clear": true
+              }
+            },
+            "payload": null
+          },
+          "before_screenshot": "screenshots/step_001_before.png",
+          "after_screenshot": "screenshots/step_001_after.png",
+          "context": {
+            "url_before": "https://the-internet.herokuapp.com/login",
+            "url_after": "https://the-internet.herokuapp.com/login",
+            "pixel_diff_pct": 1.9803392702912592,
+            "dom_nodes_added": 0,
+            "dom_nodes_removed": 0,
+            "dom_nodes_changed": 0
+          },
+          "verifier_verdict": {
+            "verdict": "pass",
+            "confidence": 0.99,
+            "reason": "The after screenshot clearly shows 'tomsmith' typed into the Username field, which is now focused (highlighted with orange border).",
+            "recommend": null,
+            "latency_ms": 2856,
+            "model": "claude-sonnet-4-6"
+          },
+          "ground_truth_label": null
+        },
+        {
+          "step_id": 2,
+          "timestamp": "2026-04-26T04:40:58.423739Z",
+          "intent": "Type 'SuperSecretPassword!' into the field at index 9.",
+          "action": {
+            "type": "click",
+            "target": {
+              "raw_type": "input",
+              "params": {
+                "index": 9,
+                "text": "SuperSecretPassword!",
+                "clear": true
+              }
+            },
+            "payload": null
+          },
+          "before_screenshot": "screenshots/step_002_before.png",
+          "after_screenshot": "screenshots/step_002_after.png",
+          "context": {
+            "url_before": "https://the-internet.herokuapp.com/login",
+            "url_after": "https://the-internet.herokuapp.com/login",
+            "pixel_diff_pct": 3.9614270109811947,
+            "dom_nodes_added": 0,
+            "dom_nodes_removed": 0,
+            "dom_nodes_changed": 0
+          },
+          "verifier_verdict": {
+            "verdict": "pass",
+            "confidence": 0.95,
+            "reason": "The password field now shows masked dots indicating text has been entered, and the field is focused with an orange border. The character count of dots matches 'SuperSecretPassword!' (20 characters).",
+            "recommend": null,
+            "latency_ms": 3190,
+            "model": "claude-sonnet-4-6"
+          },
+          "ground_truth_label": null
+        },
+        {
+          "step_id": 3,
+          "timestamp": "2026-04-26T04:41:09.431754Z",
+          "intent": "Click the element at index 10.",
+          "action": {
+            "type": "click",
+            "target": {
+              "raw_type": "click",
+              "params": {
+                "index": 10
+              }
+            },
+            "payload": null
+          },
+          "before_screenshot": "screenshots/step_003_before.png",
+          "after_screenshot": "screenshots/step_003_after.png",
+          "context": {
+            "url_before": "https://the-internet.herokuapp.com/login",
+            "url_after": "https://the-internet.herokuapp.com/secure",
+            "pixel_diff_pct": 8.27209484616892,
+            "dom_nodes_added": 0,
+            "dom_nodes_removed": 0,
+            "dom_nodes_changed": 0
+          },
+          "verifier_verdict": {
+            "verdict": "pass",
+            "confidence": 0.99,
+            "reason": "The login button was clicked and the page navigated from the login page to the secure area, showing 'You logged into a secure area!' success message.",
+            "recommend": null,
+            "latency_ms": 3099,
+            "model": "claude-sonnet-4-6"
+          },
+          "ground_truth_label": null
+        },
+        {
+          "step_id": 4,
+          "timestamp": "2026-04-26T04:41:20.267165Z",
+          "intent": "Declare the task complete and return the final answer.",
+          "action": {
+            "type": "extract",
+            "target": {
+              "raw_type": "done",
+              "params": {
+                "text": "Successfully logged in! The page now shows the 'Secure Area' with a green confirmation banner reading 'You logged into a secure area!' at https://the-internet.herokuapp.com/secure. The login was completed using username 'tomsmith' and password 'SuperSecretPassword!'.",
+                "success": true,
+                "files_to_display": []
+              }
+            },
+            "payload": null
+          },
+          "before_screenshot": "screenshots/step_004_before.png",
+          "after_screenshot": "screenshots/step_004_after.png",
+          "context": {
+            "url_before": "https://the-internet.herokuapp.com/secure",
+            "url_after": "https://the-internet.herokuapp.com/secure",
+            "pixel_diff_pct": 0.0,
+            "dom_nodes_added": 0,
+            "dom_nodes_removed": 0,
+            "dom_nodes_changed": 0
+          },
+          "verifier_verdict": {
+            "verdict": "pass",
+            "confidence": 0.98,
+            "reason": "The page shows the Secure Area with the green confirmation banner 'You logged into a secure area!' exactly as described in the final answer. The done action accurately summarizes the completed task.",
+            "recommend": null,
+            "latency_ms": 3700,
+            "model": "claude-sonnet-4-6"
+          },
+          "ground_truth_label": null
+        }
+      ],
+      "final_status": "success",
+      "error_message": null,
+      "started_at": "2026-04-26T04:40:50.342384Z",
+      "finished_at": "2026-04-26T04:41:24.978979Z"
+    },
+    {
+      "task_id": "T05",
+      "task_description": "Open https://the-internet.herokuapp.com/dynamic_loading/2. Click the Start button and wait for 'Hello World!' to appear.",
+      "mode": "verified",
+      "run_index": 0,
+      "steps": [
+        {
+          "step_id": 1,
+          "timestamp": "2026-04-26T04:41:40.222794Z",
+          "intent": "Click the element at index 8.",
+          "action": {
+            "type": "click",
+            "target": {
+              "raw_type": "click",
+              "params": {
+                "index": 8
+              }
+            },
+            "payload": null
+          },
+          "before_screenshot": "screenshots/step_001_before.png",
+          "after_screenshot": "screenshots/step_001_after.png",
+          "context": {
+            "url_before": "https://the-internet.herokuapp.com/dynamic_loading/2",
+            "url_after": "https://the-internet.herokuapp.com/dynamic_loading/2",
+            "pixel_diff_pct": 1.0722380009754138,
+            "dom_nodes_added": 0,
+            "dom_nodes_removed": 0,
+            "dom_nodes_changed": 0
+          },
+          "verifier_verdict": {
+            "verdict": "pass",
+            "confidence": 0.97,
+            "reason": "The Start button was clicked and the page now shows a loading indicator with a progress bar, confirming dynamic loading was triggered.",
+            "recommend": null,
+            "latency_ms": 3245,
+            "model": "claude-sonnet-4-6"
+          },
+          "ground_truth_label": null
+        },
+        {
+          "step_id": 2,
+          "timestamp": "2026-04-26T04:41:48.836354Z",
+          "intent": "Wait 5 for the page to update.",
+          "action": {
+            "type": "wait",
+            "target": {
+              "raw_type": "wait",
+              "params": {
+                "seconds": 5
+              }
+            },
+            "payload": null
+          },
+          "before_screenshot": "screenshots/step_002_before.png",
+          "after_screenshot": "screenshots/step_002_after.png",
+          "context": {
+            "url_before": "https://the-internet.herokuapp.com/dynamic_loading/2",
+            "url_after": "https://the-internet.herokuapp.com/dynamic_loading/2",
+            "pixel_diff_pct": 0.7786309992466575,
+            "dom_nodes_added": 0,
+            "dom_nodes_removed": 0,
+            "dom_nodes_changed": 0
+          },
+          "verifier_verdict": {
+            "verdict": "pass",
+            "confidence": 0.99,
+            "reason": "After the wait, the loading bar disappeared and 'Hello World!' is now visible on the page, confirming the page updated as intended.",
+            "recommend": null,
+            "latency_ms": 4508,
+            "model": "claude-sonnet-4-6"
+          },
+          "ground_truth_label": null
+        },
+        {
+          "step_id": 3,
+          "timestamp": "2026-04-26T04:42:08.272188Z",
+          "intent": "Declare the task complete and return the final answer.",
+          "action": {
+            "type": "extract",
+            "target": {
+              "raw_type": "done",
+              "params": {
+                "text": "The task has been completed successfully. I navigated to https://the-internet.herokuapp.com/dynamic_loading/2, clicked the 'Start' button, waited for the loading animation to finish, and 'Hello World!' has now appeared on the page as expected.",
+                "success": true,
+                "files_to_display": []
+              }
+            },
+            "payload": null
+          },
+          "before_screenshot": "screenshots/step_003_before.png",
+          "after_screenshot": "screenshots/step_003_after.png",
+          "context": {
+            "url_before": "https://the-internet.herokuapp.com/dynamic_loading/2",
+            "url_after": "https://the-internet.herokuapp.com/dynamic_loading/2",
+            "pixel_diff_pct": 0.0,
+            "dom_nodes_added": 0,
+            "dom_nodes_removed": 0,
+            "dom_nodes_changed": 0
+          },
+          "verifier_verdict": {
+            "verdict": "pass",
+            "confidence": 0.95,
+            "reason": "The page shows 'Hello World!' displayed on the dynamic loading example page, confirming the task was completed successfully. The done action is a terminal declaration, not a page interaction, so no visual change is expected.",
+            "recommend": null,
+            "latency_ms": 3719,
+            "model": "claude-sonnet-4-6"
+          },
+          "ground_truth_label": null
+        }
+      ],
+      "final_status": "success",
+      "error_message": null,
+      "started_at": "2026-04-26T04:41:40.221115Z",
+      "finished_at": "2026-04-26T04:42:12.302751Z"
+    }
+  ],
+  "baseline_success_rate": null,
+  "verified_success_rate": 1.0,
+  "delta_pp": null,
+  "verifier_precision": null,
+  "verifier_recall": null,
+  "verifier_accuracy": null
+}

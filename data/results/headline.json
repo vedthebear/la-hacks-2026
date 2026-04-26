@@ -1,0 +1,41 @@
+{
+  "baseline_success_rate": 1.0,
+  "verified_success_rate": 1.0,
+  "delta_pp": 0.0,
+  "n_baseline_runs": 3,
+  "n_verified_runs": 3,
+  "n_tasks": 3,
+  "verifier_steps_total": 8,
+  "verifier_pass": 8,
+  "verifier_fail": 0,
+  "verifier_uncertain": 0,
+  "per_task": [
+    {
+      "task_id": "T01",
+      "baseline_runs": 1,
+      "baseline_successes": 1,
+      "baseline_rate": 1.0,
+      "verified_runs": 1,
+      "verified_successes": 1,
+      "verified_rate": 1.0
+    },
+    {
+      "task_id": "T03",
+      "baseline_runs": 1,
+      "baseline_successes": 1,
+      "baseline_rate": 1.0,
+      "verified_runs": 1,
+      "verified_successes": 1,
+      "verified_rate": 1.0
+    },
+    {
+      "task_id": "T05",
+      "baseline_runs": 1,
+      "baseline_successes": 1,
+      "baseline_rate": 1.0,
+      "verified_runs": 1,
+      "verified_successes": 1,
+      "verified_rate": 1.0
+    }
+  ]
+}

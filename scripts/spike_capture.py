@@ -21,8 +21,12 @@ import time
 from datetime import datetime, timezone
 from pathlib import Path
 
-from browser_use import Agent
-from browser_use.llm import ChatAnthropic
+from dotenv import load_dotenv
+
+load_dotenv()
+
+from browser_use import Agent  # noqa: E402
+from browser_use.llm import ChatAnthropic  # noqa: E402
 
 
 OUT_DIR = Path("data/trajectories/T01_spike/baseline/0")
