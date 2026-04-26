@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.pytest_cache/
+.ruff_cache/
+
+# Trajectory data (large, share via release tarball)
+data/trajectories/
+*.png
+!dashboard/assets/*.png
+
+# Generated report
+dashboard/index.html
+dashboard/data/
+
+# Env
+.env
+.env.local
+
+# OS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+.gstack/
